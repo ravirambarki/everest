@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Everest</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/javascript" charset="utf-8">
+	$('.change').dropkick({
+  		change: function (value, label) {
+    	alert('You picked: ' + label + ':' + value);
+  		}
+	});
+</script>
+
+  <%= render 'shared/metadata' %>  
+  <link href="favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    
+</head>
+
+<body style="background-color:#FAFAFA">
+
+	<div id="wrap">			
+		<%= render 'layouts/header' %>
+	</div>
+	<div class="contact_us rotate-text" style="left: 0px;">
+		<a href="mailto:<%=contact_email%>">Contact Everest</a>
+	</div>
+
+	<div class="span12"></div>
+	<% if notice || alert %>
+        <div class="flash_messages">
+      		<%= raw "<div data-alert class='alert-box warning'> #{notice} <a href='' class='close'>&times;</a>"  if notice %>
+       		<%= raw "<div data-alert class='alert-box alert'> #{alert} <a href='' class='close'>&times;</a>"  if alert %>
+       	</div>
+     <% end %>
+      		
+	<%= yield %>
+	
+	
+
+</body>
+</html>

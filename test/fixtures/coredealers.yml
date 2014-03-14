@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  MEMBERSHIP_NO: 1
+  AGENCY_NAME: MyString
+  Total: 1
+  Average_value: 1
+  Tonnage_Per_Month: 1
+  Email_ID: MyString
+  Mobile_Number: MyText
+  Contact_Person: MyString
+  Communication_Address: MyString
+  Zone: MyString
+  STATE: MyString
+  Sales_District_no: MyString
+  Sales_District_Description: MyString
+
+two:
+  MEMBERSHIP_NO: 1
+  AGENCY_NAME: MyString
+  Total: 1
+  Average_value: 1
+  Tonnage_Per_Month: 1
+  Email_ID: MyString
+  Mobile_Number: MyText
+  Contact_Person: MyString
+  Communication_Address: MyString
+  Zone: MyString
+  STATE: MyString
+  Sales_District_no: MyString
+  Sales_District_Description: MyString

@@ -1,0 +1,34 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dealer-new
+{
+  margin-top: 6em;
+  margin-left:25%;
+}
+.dealer-new table thead tr td.dealer-field input,
+.dealer-new table thead tr td.dealer-field textarea
+{
+  min-width:100%;
+}
+
+.dealer-new input.btn
+{
+  height:2em;
+}
+
+div.dealer-login
+{
+  margin-top: 8em;
+  margin-left:35%;
+}
+
+div.dealer-login button.btn
+{
+  width: 100%;
+  margin:0;
+}
+
+
+

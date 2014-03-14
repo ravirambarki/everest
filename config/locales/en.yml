@@ -1,0 +1,44 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  company:              'Everest DIMAND'
+  company_phone:        '+91 *** *** ****'
+  company_email:        'info@everestdimand.com'
+  customercare_email:   'abc@klm.in'
+  title_default:        ''
+  meta_description:     ''
+  meta_keywords:        ''
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%m/%d/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      us_date: "%m/%d/%Y"
+      
+  time:
+    formats:
+      us_date: "%m/%d/%Y"
+      us_time: "%m/%d/%Y @ %I:%M %p"
+      long_date: "%B %d, %Y"
+

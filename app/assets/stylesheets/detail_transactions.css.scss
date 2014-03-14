@@ -1,0 +1,40 @@
+// Place all the styles related to the Detail_transactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.trans-new
+{
+  margin-top: 6em;
+  margin-left:25%;
+}
+.trans-new table thead tr td.trans-field input,
+.trans-new table thead tr td.trans-field textarea, 
+.trans-new table thead tr td.trans-field .select
+{
+  min-width:100%;
+}
+
+div.trans-new div.actions
+{
+  margin:0;
+}
+
+div.trans-new div.actions .btn
+{
+  margin-bottom:1em;
+  height:2em;
+  width:100%;
+}
+
+div.trans-new div#showMe
+{
+  display: none;
+}
+
+
+div.trans-new select#sku.selectpicker
+{
+  width: 100%;
+  background-color: #1ABC9C;
+  color: #FFFFFF;
+}

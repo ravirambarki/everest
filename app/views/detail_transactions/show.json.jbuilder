@@ -1,0 +1,1 @@
+json.extract! @detail_transaction, :id, :transaction_no, :dealership_code, :sku, :openingStock, :purchaseWeekStock, :salesWeekStock, :estimatedSelling, :breakage, :submission_date, :created_at, :updated_at

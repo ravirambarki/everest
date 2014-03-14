@@ -1,0 +1,80 @@
+<%= form_for(@detail_transaction) do |f| %>
+  <% if @detail_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@detail_transaction.errors.count, "error") %> prohibited this detail_transaction from being saved:</h2>
+
+      <ul>
+      <% @detail_transaction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <table>
+  	<thead>
+  	<tr>
+      <td class="trans-label span2"><%= f.label "Product" %></td>
+      <td class="trans-field span4">	
+		<select id="sku" name="detail_transaction[sku]" class="selectpicker" data-style="btn-primary">
+			<option value="0">SELECT PRODUCT</option>
+    		<option value="1">AC ROOFING 3.60M</option>
+    		<option value="2">AC ROOFING 3.00M</option>
+    		<option value="3">AC ROOFING 2.75M</option>
+    		<option value="4">AC ROOFING 2.50M</option>
+    		<option value="5">AC ROOFING 2.25M</option>
+    		<option value="6">AC ROOFING 2.00M</option>
+    		<option value="7">AC ROOFING 1.75M</option>
+    		<option value="8">AC ROOFING 1.50M</option>
+    		<option value="8">OTHERS</option>
+		</select>
+      </td>
+  	</tr>
+  	</thead>
+   </table>
+   
+
+   <div id="showMe">
+   <table>
+  	<thead>
+	<tr>
+      <td class="trans-label span2"><%= f.label "Opening Stock" %></td>
+      <td class="trans-field span4"><%= f.text_field :openingStock %></td>
+  	</tr>
+  	<tr>
+      <td class="trans-label span2"><%= f.label "Purchase Week Stock" %></td>
+      <td class="trans-field span4"><%= f.text_field :purchaseWeekStock %></td>
+  	</tr>
+  	<tr>
+      <td class="trans-label span2"><%= f.label "Sales Week Stock" %></td>
+      <td class="trans-field span4"><%= f.text_field :salesWeekStock %></td>
+  	</tr>
+  	<tr>
+      <td class="trans-label span2"><%= f.label "Estimated Selling" %></td>
+      <td class="trans-field span4"><%= f.text_field :estimatedSelling %></td>
+  	</tr>
+  </thead>
+   </table>
+   
+   
+   	<%= f.hidden_field :dealership_code, :value => @user.dealership_code%>
+  	<div class="actions span6">
+  		<%= f.submit "Add Product" , class: "btn span6 btn-info"%>
+    	<%= button_to 'Submit',root_url, :class => 'btn span6 btn-info' %>
+  	</div>
+  </div>
+<% end %>
+
+
+<script>
+$("#sku").on("change", function() {
+	$("#showMe").show();
+    if($(this).val() == "0"){
+    	$("#showMe").hide()
+    }
+    else
+    {
+    	$("#showMe").show()
+    }
+})
+</script>

@@ -1,0 +1,51 @@
+<h1>Listing coredealers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Membership no</th>
+      <th>Agency name</th>
+      <th>Total</th>
+      <th>Average value</th>
+      <th>Tonnage per month</th>
+      <th>Email id</th>
+      <th>Mobile number</th>
+      <th>Contact person</th>
+      <th>Communication address</th>
+      <th>Zone</th>
+      <th>State</th>
+      <th>Sales district no</th>
+      <th>Sales district description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coredealers.each do |coredealer| %>
+      <tr>
+        <td><%= coredealer.MEMBERSHIP_NO %></td>
+        <td><%= coredealer.AGENCY_NAME %></td>
+        <td><%= coredealer.Total %></td>
+        <td><%= coredealer.Average_value %></td>
+        <td><%= coredealer.Tonnage_Per_Month %></td>
+        <td><%= coredealer.Email_ID %></td>
+        <td><%= coredealer.Mobile_Number %></td>
+        <td><%= coredealer.Contact_Person %></td>
+        <td><%= coredealer.Communication_Address %></td>
+        <td><%= coredealer.Zone %></td>
+        <td><%= coredealer.STATE %></td>
+        <td><%= coredealer.Sales_District_no %></td>
+        <td><%= coredealer.Sales_District_Description %></td>
+        <td><%= link_to 'Show', coredealer %></td>
+        <td><%= link_to 'Edit', edit_coredealer_path(coredealer) %></td>
+        <td><%= link_to 'Destroy', coredealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coredealer', new_coredealer_path %>

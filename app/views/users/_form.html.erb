@@ -1,0 +1,45 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+  	<thead>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :dealership_code %></td>
+      <td class="dealer-field span4"><%= f.text_field :dealership_code %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :dealership_name %></td>
+      <td class="dealer-field span4"><%= f.text_field :dealership_name %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :contact_person %></td>
+      <td class="dealer-field span4"><%= f.text_field :contact_person %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :address %></td>
+      <td class="dealer-field span4"><%= f.text_area :address %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :city %></td>
+      <td class="dealer-field span4"><%= f.text_field :city %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :contact %></td>
+      <td class="dealer-field span4"><%= f.text_field :contact %></td>
+  	</tr>
+  	</thead>
+  </table>
+  <div class="actions">
+    <%= f.submit "Create Account" , class: "btn span6 btn-info"%>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transaction no:</strong>
+  <%= @detail_transaction.transaction_no %>
+</p>
+
+<p>
+  <strong>Dealership code:</strong>
+  <%= @detail_transaction.dealership_code %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @detail_transaction.sku %>
+</p>
+
+<p>
+  <strong>Openingstock:</strong>
+  <%= @detail_transaction.openingStock %>
+</p>
+
+<p>
+  <strong>Purchaseweekstock:</strong>
+  <%= @detail_transaction.purchaseWeekStock %>
+</p>
+
+<p>
+  <strong>Salesweekstock:</strong>
+  <%= @detail_transaction.salesWeekStock %>
+</p>
+
+<p>
+  <strong>Estimatedselling:</strong>
+  <%= @detail_transaction.estimatedSelling %>
+</p>
+
+<p>
+  <strong>Breakage:</strong>
+  <%= @detail_transaction.breakage %>
+</p>
+
+<p>
+  <strong>Submission date:</strong>
+  <%= @detail_transaction.submission_date %>
+</p>
+
+<%= link_to 'Edit', edit_detail_transaction_path(@detail_transaction) %> |
+<%= link_to 'Back', detail_transactions_path %>

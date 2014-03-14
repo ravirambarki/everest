@@ -1,0 +1,33 @@
+div.header-block
+{
+  font-family: "Open Sans";
+  color: #FFFFFF;
+   margin:0;
+  box-shadow: 0 0 1px #b2b2b2;
+  -webkit-box-shadow: 0 0 1px #b2b2b2;
+}
+
+
+.header-logo
+{
+  width: 17em;
+  max-height:4em;  
+  margin: 0.5em;
+}
+
+
+.header-nav-button-block
+{
+	margin-right: 1em;
+}
+
+#header-menu
+{
+	padding: 2em 0.5em 2em 0.5em;
+}
+
+#header-menu:hover
+{
+  background-color: #1ABC9C;
+  color:#FFFFFF;
+}

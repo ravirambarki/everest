@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  transaction_no: 1
+  dealership_code: MyString
+  sku: MyString
+  openingStock: 1
+  purchaseWeekStock: 1
+  salesWeekStock: 1
+  estimatedSelling: 1
+  breakage: 1
+  submission_date: 2014-02-28 22:15:45
+
+two:
+  transaction_no: 1
+  dealership_code: MyString
+  sku: MyString
+  openingStock: 1
+  purchaseWeekStock: 1
+  salesWeekStock: 1
+  estimatedSelling: 1
+  breakage: 1
+  submission_date: 2014-02-28 22:15:45

@@ -1,0 +1,69 @@
+<%= form_for(@coredealer) do |f| %>
+  <% if @coredealer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coredealer.errors.count, "error") %> prohibited this coredealer from being saved:</h2>
+
+      <ul>
+      <% @coredealer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :MEMBERSHIP_NO %><br>
+    <%= f.number_field :MEMBERSHIP_NO %>
+  </div>
+  <div class="field">
+    <%= f.label :AGENCY_NAME %><br>
+    <%= f.text_field :AGENCY_NAME %>
+  </div>
+  <div class="field">
+    <%= f.label :Total %><br>
+    <%= f.number_field :Total %>
+  </div>
+  <div class="field">
+    <%= f.label :Average_value %><br>
+    <%= f.number_field :Average_value %>
+  </div>
+  <div class="field">
+    <%= f.label :Tonnage_Per_Month %><br>
+    <%= f.number_field :Tonnage_Per_Month %>
+  </div>
+  <div class="field">
+    <%= f.label :Email_ID %><br>
+    <%= f.text_field :Email_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :Mobile_Number %><br>
+    <%= f.text_area :Mobile_Number %>
+  </div>
+  <div class="field">
+    <%= f.label :Contact_Person %><br>
+    <%= f.text_field :Contact_Person %>
+  </div>
+  <div class="field">
+    <%= f.label :Communication_Address %><br>
+    <%= f.text_field :Communication_Address %>
+  </div>
+  <div class="field">
+    <%= f.label :Zone %><br>
+    <%= f.text_field :Zone %>
+  </div>
+  <div class="field">
+    <%= f.label :STATE %><br>
+    <%= f.text_field :STATE %>
+  </div>
+  <div class="field">
+    <%= f.label :Sales_District_no %><br>
+    <%= f.text_field :Sales_District_no %>
+  </div>
+  <div class="field">
+    <%= f.label :Sales_District_Description %><br>
+    <%= f.text_field :Sales_District_Description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

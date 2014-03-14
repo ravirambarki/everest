@@ -1,0 +1,8 @@
+<div class="dealer-login span4">
+  <%= form_tag(new_detail_transaction_path, :method => 'get', :class => 'navbar-search') do %>
+  		<p>Enter your Everest Star Membership Code</p>
+  		<%= text_field_tag :membership_code, params[:membership_code], :placeholder => "Enter Membership Code", :class => "span4" %>		
+    	<button type="submit" class="btn span4 btn-primary">Submit</button>
+  <% end %>
+</div>
+

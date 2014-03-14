@@ -1,0 +1,33 @@
+html.dk_fouc body
+{
+	margin: 0 3.5em 0 3.5em;
+}
+
+.contact_us
+{
+	margin: 15em 0em 10em -4em;
+	position: absolute;
+	padding: 1em;
+	
+}
+
+div.contact_us a
+{
+  padding:1em;
+  background-color: #1ABC9C;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 2px solid;
+  border-radius:0 0 10px 10px;
+}
+
+
+
+.rotate-text {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: none; /*Mandatory for IE9 to show the vertical text correctly*/      
+}

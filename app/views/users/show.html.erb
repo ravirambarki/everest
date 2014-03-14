@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealership code:</strong>
+  <%= @user.dealership_code %>
+</p>
+
+<p>
+  <strong>Dealership name:</strong>
+  <%= @user.dealership_name %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @user.contact_person %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+
+<p>
+  <strong>Weekly submission:</strong>
+  <%= @user.weekly_submission %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dealership_code: MyString
+  dealership_name: MyString
+  contact_person: MyString
+  address: MyString
+  city: MyString
+  contact: MyString
+  weekly_submission: false
+
+two:
+  dealership_code: MyString
+  dealership_name: MyString
+  contact_person: MyString
+  address: MyString
+  city: MyString
+  contact: MyString
+  weekly_submission: false
