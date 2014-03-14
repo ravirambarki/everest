@@ -42,8 +42,21 @@ class DetailTransactionsController < ApplicationController
   # POST /detail_transactions.json
   def create
     @detail_transaction = DetailTransaction.new(detail_transaction_params)
+    
+    recent_dt = DetailTransaction.find(:first, :order => "created_at DESC", :conditions => [ "sku = ? AND dealership_code = ?", detail_transaction_params[:sku], detail_transaction_params[:dealership_code]])
 
     respond_to do |format|
+      if recent_dt   
+        @date = Time.now.to_date
+        @todayweek = @date.strftime("%U")
+        @recardif = recent_dt.created_at.strftime("%U")   
+      
+        if @todayweek = @recardif
+          format.html { redirect_to new_detail_transaction_path, alert: "Week details are already entered for #{detail_transaction_params[:sku]}" }
+          format.json { render json: @detail_transaction.errors, status: "Week details are already entered for #{detail_transaction_params[:sku]}"  }
+        end
+      end
+        
       if @detail_transaction.save
         if params[:commit] == "Add Product"
           format.html { redirect_to new_detail_transaction_path, notice: 'Detail transaction was successfully created.' }
