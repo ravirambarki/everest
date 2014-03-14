@@ -59,7 +59,7 @@ class DetailTransactionsController < ApplicationController
         
       if @detail_transaction.save
         if params[:commit] == "Add Product"
-          format.html { redirect_to new_detail_transaction_path, notice: 'Detail transaction was successfully created.' }
+          format.html { redirect_to new_detail_transaction_path, notice: 'Product Details are saved.' }
         else
           format.html { redirect_to root_url , notice: 'Thanks for Submiting the information.' }
         end
