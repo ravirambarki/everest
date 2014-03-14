@@ -18,7 +18,6 @@ gem 'thin'
 
 gem 'will_paginate', '~> 3.0.4'
 gem 'pg'
-gem 'sqlite3'
 gem "flat-ui-rails"
 
 gem "bcrypt-ruby", :require => "bcrypt"
