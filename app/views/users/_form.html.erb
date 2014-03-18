@@ -14,16 +14,20 @@
   <table>
   	<thead>
   	<tr>
-      <td class="dealer-label span2"><%= f.label :dealership_code %></td>
+      <td class="dealer-label span2"><%= f.label :dealership_code, 'Dealership Code' %></td>
       <td class="dealer-field span4"><%= f.text_field :dealership_code %></td>
   	</tr>
   	<tr>
-      <td class="dealer-label span2"><%= f.label :dealership_name %></td>
+      <td class="dealer-label span2"><%= f.label :dealership_name, 'Dealership Name' %></td>
       <td class="dealer-field span4"><%= f.text_field :dealership_name %></td>
   	</tr>
   	<tr>
-      <td class="dealer-label span2"><%= f.label :contact_person %></td>
+      <td class="dealer-label span2"><%= f.label :contact_person, 'Contact Person'%></td>
       <td class="dealer-field span4"><%= f.text_field :contact_person %></td>
+  	</tr>
+  	<tr>
+      <td class="dealer-label span2"><%= f.label :contact, 'Contact Number' %></td>
+      <td class="dealer-field span4"><%= f.text_field :contact %></td>
   	</tr>
   	<tr>
       <td class="dealer-label span2"><%= f.label :address %></td>
@@ -32,10 +36,6 @@
   	<tr>
       <td class="dealer-label span2"><%= f.label :city %></td>
       <td class="dealer-field span4"><%= f.text_field :city %></td>
-  	</tr>
-  	<tr>
-      <td class="dealer-label span2"><%= f.label :contact %></td>
-      <td class="dealer-field span4"><%= f.text_field :contact %></td>
   	</tr>
   	</thead>
   </table>

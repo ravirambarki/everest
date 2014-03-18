@@ -38,19 +38,19 @@
    <table>
   	<thead>
 	<tr>
-      <td class="trans-label span2"><%= f.label "Opening Stock" %></td>
+      <td class="trans-label span2"><%= f.label :openingStock, 'Opening Stock' %></td>
       <td class="trans-field span4"><%= f.text_field :openingStock %></td>
   	</tr>
   	<tr>
-      <td class="trans-label span2"><%= f.label "Purchase Week Stock" %></td>
+      <td class="trans-label span2"><%= f.label :purchaseWeekStock, 'Purchase Week Stock' %></td>
       <td class="trans-field span4"><%= f.text_field :purchaseWeekStock %></td>
   	</tr>
   	<tr>
-      <td class="trans-label span2"><%= f.label "Sales Week Stock" %></td>
+      <td class="trans-label span2"><%= f.label :salesWeekStock, 'Sales Week Stock' %></td>
       <td class="trans-field span4"><%= f.text_field :salesWeekStock %></td>
   	</tr>
   	<tr>
-      <td class="trans-label span2"><%= f.label "Estimated Selling" %></td>
+      <td class="trans-label span2"><%= f.label :estimatedSelling, 'Est. Selling Price (in Running Mts)' %></td>
       <td class="trans-field span4"><%= f.text_field :estimatedSelling %></td>
   	</tr>
   </thead>
