@@ -1,7 +1,6 @@
 Everest::Application.routes.draw do
+  get "faqs/index", :as => "faq"
   resources :users
-  get "/users/login"  => "users#login"
-
 
   resources :detail_transactions
 
