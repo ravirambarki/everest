@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     cookies.delete(:remember_code)
+    cookies.delete(:added_products)
   end
 
   # GET /users/1

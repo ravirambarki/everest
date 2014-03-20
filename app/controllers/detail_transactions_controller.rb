@@ -26,6 +26,7 @@ class DetailTransactionsController < ApplicationController
       if @user
         cookies.permanent[:remember_code] = @user.dealership_code
         @detail_transaction = DetailTransaction.new
+        @added_products = cookies[:added_products]?cookies[:added_products]:""
       else
         redirect_to(root_url , notice: 'Please Enter valid Membership Code')
       end
@@ -59,8 +60,11 @@ class DetailTransactionsController < ApplicationController
         
       if @detail_transaction.save
         if params[:commit] == "Add Product"
+          added_already = (cookies[:added_products]?cookies[:added_products]:"")
+          cookies[:added_products] = detail_transaction_params[:sku] + " , " + added_already 
           format.html { redirect_to new_detail_transaction_path, notice: 'Product Details are saved.' }
         else
+          cookies.delete(:added_products)
           format.html { redirect_to root_url , notice: 'Thanks for Submiting the information.' }
         end
         format.json { render action: 'show', status: :created, location: @detail_transaction }

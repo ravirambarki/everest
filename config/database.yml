@@ -22,8 +22,7 @@ test:
 
 production:
   adapter: postgresql
-  encoding: utf8
-  pool: 5
-  username: root
-  password: ''
-  database: project_production
+  host: localhost
+  username: everest
+  password: 'everest'
+  database: everest_production
