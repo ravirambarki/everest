@@ -31,14 +31,33 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    
+    @coreuser = Coredealer.find_by(:membership_no => user_params[:dealership_code])
+    
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to root_url, notice: 'Dealer was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @user }
+      
+      is_coreexist = false
+      if @coreuser 
+        tempStr = @coreuser.agency_name
+        tempStr.downcase!
+        tempStr2 = user_params[:dealership_name]
+        tempStr2.downcase!
+        if tempStr.strip == tempStr2.strip
+          is_coreexist = true
+        end 
+      end
+      
+      if is_coreexist
+        if @user.save
+          format.html { redirect_to root_url, notice: 'Dealer is successfully created.' }
+          format.json { render action: 'show', status: :created, location: @user }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+          format.html { redirect_to root_url, alert: 'Dealer is not created. Contact Everest to take Dealership.' }
+          format.json { render json: @user.errors, status: :unprocessable_entity } 
       end
     end
   end

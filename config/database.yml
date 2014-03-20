@@ -16,9 +16,7 @@ test:
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
-  password: ''
-  database: project_test
+  database: Ravikishor
 
 production:
   adapter: postgresql

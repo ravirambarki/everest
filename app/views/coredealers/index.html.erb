@@ -8,7 +8,7 @@
       <th>Total</th>
       <th>Average value</th>
       <th>Tonnage per month</th>
-      <th>Email id</th>
+      <th>Email</th>
       <th>Mobile number</th>
       <th>Contact person</th>
       <th>Communication address</th>
@@ -25,19 +25,19 @@
   <tbody>
     <% @coredealers.each do |coredealer| %>
       <tr>
-        <td><%= coredealer.MEMBERSHIP_NO %></td>
-        <td><%= coredealer.AGENCY_NAME %></td>
-        <td><%= coredealer.Total %></td>
-        <td><%= coredealer.Average_value %></td>
-        <td><%= coredealer.Tonnage_Per_Month %></td>
-        <td><%= coredealer.Email_ID %></td>
-        <td><%= coredealer.Mobile_Number %></td>
-        <td><%= coredealer.Contact_Person %></td>
-        <td><%= coredealer.Communication_Address %></td>
-        <td><%= coredealer.Zone %></td>
-        <td><%= coredealer.STATE %></td>
-        <td><%= coredealer.Sales_District_no %></td>
-        <td><%= coredealer.Sales_District_Description %></td>
+        <td><%= coredealer.membership_no %></td>
+        <td><%= coredealer.agency_name %></td>
+        <td><%= coredealer.total %></td>
+        <td><%= coredealer.average_value %></td>
+        <td><%= coredealer.tonnage_per_month %></td>
+        <td><%= coredealer.email_id %></td>
+        <td><%= coredealer.mobile_number %></td>
+        <td><%= coredealer.contact_person %></td>
+        <td><%= coredealer.communication_address %></td>
+        <td><%= coredealer.zone %></td>
+        <td><%= coredealer.state %></td>
+        <td><%= coredealer.sales_district_no %></td>
+        <td><%= coredealer.sales_district_description %></td>
         <td><%= link_to 'Show', coredealer %></td>
         <td><%= link_to 'Edit', edit_coredealer_path(coredealer) %></td>
         <td><%= link_to 'Destroy', coredealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

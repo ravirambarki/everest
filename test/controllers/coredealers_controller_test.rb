@@ -18,7 +18,7 @@ class CoredealersControllerTest < ActionController::TestCase
 
   test "should create coredealer" do
     assert_difference('Coredealer.count') do
-      post :create, coredealer: { AGENCY_NAME: @coredealer.AGENCY_NAME, Average_value: @coredealer.Average_value, Communication_Address: @coredealer.Communication_Address, Contact_Person: @coredealer.Contact_Person, Email_ID: @coredealer.Email_ID, MEMBERSHIP_NO: @coredealer.MEMBERSHIP_NO, Mobile_Number: @coredealer.Mobile_Number, STATE: @coredealer.STATE, Sales_District_Description: @coredealer.Sales_District_Description, Sales_District_no: @coredealer.Sales_District_no, Tonnage_Per_Month: @coredealer.Tonnage_Per_Month, Total: @coredealer.Total, Zone: @coredealer.Zone }
+      post :create, coredealer: { agency_name: @coredealer.agency_name, average_value: @coredealer.average_value, communication_address: @coredealer.communication_address, contact_person: @coredealer.contact_person, email_id: @coredealer.email_id, membership_no: @coredealer.membership_no, mobile_number: @coredealer.mobile_number, sales_district_description: @coredealer.sales_district_description, sales_district_no: @coredealer.sales_district_no, state: @coredealer.state, tonnage_per_month: @coredealer.tonnage_per_month, total: @coredealer.total, zone: @coredealer.zone }
     end
 
     assert_redirected_to coredealer_path(assigns(:coredealer))
@@ -35,7 +35,7 @@ class CoredealersControllerTest < ActionController::TestCase
   end
 
   test "should update coredealer" do
-    patch :update, id: @coredealer, coredealer: { AGENCY_NAME: @coredealer.AGENCY_NAME, Average_value: @coredealer.Average_value, Communication_Address: @coredealer.Communication_Address, Contact_Person: @coredealer.Contact_Person, Email_ID: @coredealer.Email_ID, MEMBERSHIP_NO: @coredealer.MEMBERSHIP_NO, Mobile_Number: @coredealer.Mobile_Number, STATE: @coredealer.STATE, Sales_District_Description: @coredealer.Sales_District_Description, Sales_District_no: @coredealer.Sales_District_no, Tonnage_Per_Month: @coredealer.Tonnage_Per_Month, Total: @coredealer.Total, Zone: @coredealer.Zone }
+    patch :update, id: @coredealer, coredealer: { agency_name: @coredealer.agency_name, average_value: @coredealer.average_value, communication_address: @coredealer.communication_address, contact_person: @coredealer.contact_person, email_id: @coredealer.email_id, membership_no: @coredealer.membership_no, mobile_number: @coredealer.mobile_number, sales_district_description: @coredealer.sales_district_description, sales_district_no: @coredealer.sales_district_no, state: @coredealer.state, tonnage_per_month: @coredealer.tonnage_per_month, total: @coredealer.total, zone: @coredealer.zone }
     assert_redirected_to coredealer_path(assigns(:coredealer))
   end
 

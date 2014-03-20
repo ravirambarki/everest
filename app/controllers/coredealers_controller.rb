@@ -69,6 +69,6 @@ class CoredealersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coredealer_params
-      params.require(:coredealer).permit(:MEMBERSHIP_NO, :AGENCY_NAME, :Total, :Average_value, :Tonnage_Per_Month, :Email_ID, :Mobile_Number, :Contact_Person, :Communication_Address, :Zone, :STATE, :Sales_District_no, :Sales_District_Description)
+      params.require(:coredealer).permit(:membership_no, :agency_name, :total, :average_value, :tonnage_per_month, :email_id, :mobile_number, :contact_person, :communication_address, :zone, :state, :sales_district_no, :sales_district_description)
     end
 end
