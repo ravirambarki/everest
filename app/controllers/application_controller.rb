@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   def is_correct_day
     @date = Time.now.to_date
     @day = @date.strftime("%^A")
-    return ((@day == "MONDAY")||(@day == "THESDAY")) || true
+    return ((@day == "MONDAY")||(@day == "THESDAY")||(@day == "WEDNESDAY"))
   end
 end

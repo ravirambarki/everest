@@ -23,6 +23,7 @@ en:
   company_phone:        '+91 *** *** ****'
   company_email:        'info@everestdimand.com'
   customercare_email:   'abc@klm.in'
+  android_app_file:     'EverestDimand_v2.apk'
   title_default:        ''
   meta_description:     ''
   meta_keywords:        ''

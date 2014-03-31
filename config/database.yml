@@ -23,4 +23,4 @@ production:
   host: localhost
   username: everest
   password: 'everest'
-  database: everest_production
+  database: everestapi

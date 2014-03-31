@@ -1,8 +1,22 @@
-<div class="dealer-login span4">
-  <%= form_tag(new_detail_transaction_path, :method => 'get', :class => 'navbar-search') do %>
+<div class="root-page">
+	<%= link_to(download_path(android_app_file)) do %>
+	<div class="android-download span4">
+		<%= image_tag("app_logo.png", :class => "app-logo span1") %>
+		<div class="app-text span3">
+			<p>--Download--<br>
+			<b>LATEST ANDROID APPS</b></p>
+		</div>
+	</div>
+	<% end %>
+	
+	<div class="span12"></div>
+	<div class="dealer-login span4">
+  	  <%= form_tag(new_detail_transaction_path, :method => 'get', :class => 'navbar-search') do %>
   		<p>Enter your Everest Star Membership Code</p>
   		<%= text_field_tag :membership_code, params[:membership_code], :placeholder => "Enter Membership Code", :class => "span4" %>		
     	<button type="submit" class="btn span4 btn-info">Submit</button>
-  <% end %>
+  	  <% end %>
+	</div>
+
 </div>
 
